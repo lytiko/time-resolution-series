@@ -1,0 +1,17 @@
+__pycache__
+*.pyc
+secrets.py
+*.sqlite3*
+!data/.gitkeep
+.DS_Store
+dump.json
+charting_library
+highcharts
+*.csv
+*.dat
+!tests/data
+*.zip
+*.pdf
+node_modules
+*.prof
+build
