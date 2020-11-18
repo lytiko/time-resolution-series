@@ -1,0 +1,21 @@
+{
+  "name": "time-resolution-series",
+  "version": "0.1.0",
+  "description": "A library for managing time series at different time resolutions.",
+  "main": "series.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lytiko/time-resolution-series"
+  },
+  "keywords": [
+    "time-series"
+  ],
+  "author": "Sam Ireland",
+  "license": "ISC",
+  "dependencies": {
+    "moment-timezone": "^0.5.32"
+  }
+}
