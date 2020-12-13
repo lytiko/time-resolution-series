@@ -10,6 +10,44 @@
             "input": [1000, null],
             "output": true
         }],
+        "m": [{
+            "input": [0, "m"],
+            "output": true
+        }, {
+            "input": [20, "m"],
+            "output": false
+        }, {
+            "input": [60, "m"],
+            "output": true
+        }, {
+            "input": [-60, "m"],
+            "output": true
+        }, {
+            "input": [75, "m"],
+            "output": false
+        }, {
+            "input": [120, "m"],
+            "output": true
+        }],
+        "H": [{
+            "input": [0, "H"],
+            "output": true
+        }, {
+            "input": [100, "H"],
+            "output": false
+        }, {
+            "input": [3600, "H"],
+            "output": true
+        }, {
+            "input": [-3600, "H"],
+            "output": true
+        }, {
+            "input": [3601, "H"],
+            "output": false
+        }, {
+            "input": [7200, "H"],
+            "output": true
+        }],
         "D": [{
             "input": [0, "D"],
             "output": true

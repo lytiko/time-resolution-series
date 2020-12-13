@@ -11,6 +11,18 @@ class TimestampValidationTests(TestCase):
         for test_case in test_data["validateTimestampAgainstResolution"]["noResolution"]:
             ts, res = test_case["input"]
             self.assertEqual(validate_timestamp_against_resolution(ts, res), test_case["output"])
+    
+
+    def test_timestamps_with_m_resolution(self):
+        for test_case in test_data["validateTimestampAgainstResolution"]["m"]:
+            ts, res = test_case["input"]
+            self.assertEqual(validate_timestamp_against_resolution(ts, res), test_case["output"])
+    
+
+    def test_timestamps_with_H_resolution(self):
+        for test_case in test_data["validateTimestampAgainstResolution"]["H"]:
+            ts, res = test_case["input"]
+            self.assertEqual(validate_timestamp_against_resolution(ts, res), test_case["output"])
 
 
     def test_timestamps_with_D_resolution(self):
