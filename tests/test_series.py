@@ -1,7 +1,5 @@
-import os
-os.chdir("python")
 from unittest import TestCase
-from series import *
+from python.series import *
 
 class TimestampValidationTests(TestCase):
 
