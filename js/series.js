@@ -20,4 +20,20 @@ const validateTimestampAgainstResolution = (timestamp, resolution) => {
   }
 }
 
+
+const timestampToResolution = (timestamp, resolution) => {
+  /**
+   * Rolls a timestamp back to the most recent timestamo that matches the
+   * given resolution.
+   */
+
+  const dt = moment(timestamp * 1000).utc();
+  const momentStr = {
+    Y: "year", M: "month", W: "isoWeek", D: "day", H: "hour", m: "minute"
+  }[resolution];
+  return dt.startOf(momentStr).valueOf() / 1000;
+}
+
+
 exports.validateTimestampAgainstResolution = validateTimestampAgainstResolution;
+exports.timestampToResolution = timestampToResolution;
