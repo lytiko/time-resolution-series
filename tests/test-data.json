@@ -1,0 +1,90 @@
+{
+    "validateTimestampAgainstResolution": {
+        "noResolution": [{
+            "input": [0, null],
+            "output": true
+        }, {
+            "input": [-100, null],
+            "output": true
+        }, {
+            "input": [1000, null],
+            "output": true
+        }],
+        "D": [{
+            "input": [0, "D"],
+            "output": true
+        }, {
+            "input": [100, "D"],
+            "output": false
+        }, {
+            "input": [86400, "D"],
+            "output": true
+        }, {
+            "input": [-86400, "D"],
+            "output": true
+        }, {
+            "input": [-80000, "D"],
+            "output": false
+        }],
+        "W": [{
+            "input": [0, "W"],
+            "output": false
+        }, {
+            "input": [86400, "W"],
+            "output": false
+        }, {
+            "input": [946684800, "W"],
+            "output": false
+        }, {
+            "input": [946684801, "W"],
+            "output": false
+        }, {
+            "input": [1605484800, "W"],
+            "output": true
+        }, {
+            "input": [-259200, "W"],
+            "output": true
+        }],
+        "M": [{
+            "input": [1, "M"],
+            "output": false
+        }, {
+            "input": [86400, "M"],
+            "output": false
+        }, {
+            "input": [946684800, "M"],
+            "output": true
+        }, {
+            "input": [946684801, "M"],
+            "output": false
+        }, {
+            "input": [1605484800, "M"],
+            "output": false
+        }, {
+            "input": [1201824000, "M"],
+            "output": true
+        }],
+        "Y": [{
+            "input": [1, "Y"],
+            "output": false
+        }, {
+            "input": [86400, "Y"],
+            "output": false
+        }, {
+            "input": [946684800, "Y"],
+            "output": true
+        }, {
+            "input": [946684801, "Y"],
+            "output": false
+        }, {
+            "input": [1605484800, "Y"],
+            "output": false
+        }, {
+            "input": [1201824000, "Y"],
+            "output": false
+        }, {
+            "input": [1199145600, "Y"],
+            "output": true
+        }]
+    }
+}
