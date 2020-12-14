@@ -35,5 +35,19 @@ const timestampToResolution = (timestamp, resolution) => {
 }
 
 
+const combineDatapointValues = (values, seriesType) => {
+  /**
+   * Combines the values of multiple datapoints into a single value.
+   */
+
+  if (seriesType === 2) return values[0];
+  if (seriesType === 3) return values.length;
+  if (seriesType === 4) return values.reduce((prev, curr) => prev + curr, 0);
+  return values.reduce((prev, curr) => prev + curr, 0) / values.length;
+}
+
+
+
 exports.validateTimestampAgainstResolution = validateTimestampAgainstResolution;
 exports.timestampToResolution = timestampToResolution;
+exports.combineDatapointValues = combineDatapointValues;

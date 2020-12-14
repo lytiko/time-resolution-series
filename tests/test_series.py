@@ -86,3 +86,36 @@ class TimestampToResolutionTests(TestCase):
         for test_case in test_data["timestampToResolution"]["Y"]:
             ts, res = test_case["input"]
             self.assertEqual(timestamp_to_resolution(ts, res), test_case["output"])
+
+
+
+class DatapointValueCombinaiton(TestCase):
+
+    def test_can_combine_type_1_values(self):
+        for test_case in test_data["combineDatapointValues"]["type1"]:
+            values, type_ = test_case["input"]
+            self.assertEqual(combine_datapoint_values(values, type_), test_case["output"])
+    
+
+    def test_can_combine_type_2_values(self):
+        for test_case in test_data["combineDatapointValues"]["type2"]:
+            values, type_ = test_case["input"]
+            self.assertEqual(combine_datapoint_values(values, type_), test_case["output"])
+
+
+    def test_can_combine_type_3_values(self):
+        for test_case in test_data["combineDatapointValues"]["type3"]:
+            values, type_ = test_case["input"]
+            self.assertEqual(combine_datapoint_values(values, type_), test_case["output"])
+    
+
+    def test_can_combine_type_4_values(self):
+        for test_case in test_data["combineDatapointValues"]["type4"]:
+            values, type_ = test_case["input"]
+            self.assertEqual(combine_datapoint_values(values, type_), test_case["output"])
+    
+
+    def test_can_combine_type_5_values(self):
+        for test_case in test_data["combineDatapointValues"]["type5"]:
+            values, type_ = test_case["input"]
+            self.assertEqual(combine_datapoint_values(values, type_), test_case["output"])

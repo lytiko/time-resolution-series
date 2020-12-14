@@ -30,3 +30,12 @@ def timestamp_to_resolution(timestamp, resolution):
     )
     if resolution == "W": day -= timedelta(days=day.weekday())
     return datetime.timestamp(day)
+
+
+def combine_datapoint_values(values, series_type):
+    """Combines the values of multiple datapoints into a single value."""
+
+    if series_type == 2: return values[0]
+    if series_type == 3: return len(values)
+    if series_type == 4: return sum(values)
+    return sum(values) / len(values)

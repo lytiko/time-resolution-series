@@ -1,6 +1,7 @@
 const {
   validateTimestampAgainstResolution,
-  timestampToResolution
+  timestampToResolution,
+  combineDatapointValues
 } = require("../js/series");
 const testData = require("./test-data.json");
 
@@ -100,3 +101,39 @@ test("converting timestamps to Y resolution", () => {
 });
 
 
+
+// combineDatapointValues
+test("combining series 1 values", () => {
+  for (let testCase of testData.combineDatapointValues.type1) {
+    const [values, type] = testCase.input;
+    expect(combineDatapointValues(values, type)).toBe(testCase.output);
+  }
+});
+
+test("combining series 2 values", () => {
+  for (let testCase of testData.combineDatapointValues.type2) {
+    const [values, type] = testCase.input;
+    expect(combineDatapointValues(values, type)).toBe(testCase.output);
+  }
+});
+
+test("combining series 3 values", () => {
+  for (let testCase of testData.combineDatapointValues.type3) {
+    const [values, type] = testCase.input;
+    expect(combineDatapointValues(values, type)).toBe(testCase.output);
+  }
+});
+
+test("combining series 4 values", () => {
+  for (let testCase of testData.combineDatapointValues.type4) {
+    const [values, type] = testCase.input;
+    expect(combineDatapointValues(values, type)).toBe(testCase.output);
+  }
+});
+
+test("combining series 5 values", () => {
+  for (let testCase of testData.combineDatapointValues.type5) {
+    const [values, type] = testCase.input;
+    expect(combineDatapointValues(values, type)).toBe(testCase.output);
+  }
+});
