@@ -1,0 +1,1 @@
+python -m unittest discover tests && jest --reporters="jest-simple-dot-reporter"
