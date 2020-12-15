@@ -3,6 +3,10 @@
 A library for managing time series at different time resolutions, implemented in
 Python and Javascript.
 
+## Series
+
+A series is a JSON object that represents how some quantity changes over time.
+
 ## Functions
 
 `validate_timestamp_against_resolution(time, resolution)` - checks that a timestamp matches some resolution.

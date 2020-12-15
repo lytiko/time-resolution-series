@@ -1,13 +1,13 @@
 {
     "validateTimestampAgainstResolution": {
-        "noResolution": [{
-            "input": [0, null],
+        "S": [{
+            "input": [0, "S"],
             "output": true
         }, {
-            "input": [-100, null],
+            "input": [-100, "S"],
             "output": true
         }, {
-            "input": [1000, null],
+            "input": [1000, "S"],
             "output": true
         }],
         "m": [{
@@ -126,6 +126,13 @@
         }]
     },
     "timestampToResolution": {
+        "S": [{
+            "input": [0, "S"],
+            "output": 0
+        }, {
+            "input": [21, "S"],
+            "output": 21
+        }],
         "m": [{
             "input": [0, "m"],
             "output": 0
@@ -280,5 +287,381 @@
             "input": [[1, 5], 5],
             "output": 3
         }]
+    },
+    "validateSeries": {
+        "keys": {
+            "valid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }],
+            "invalid": [{
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "units": "kg",
+                "type": 1,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "type": 1,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "D",
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "D",
+                "composite": null
+            }]
+        },
+        "name": {
+            "valid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }],
+            "invalid": [{
+                "name": "",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }]
+        },
+        "type": {
+            "valid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 2,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 3,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 4,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 5,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }],
+            "invalid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 0,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 6,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": null,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }]
+        },
+        "resolution": {
+            "valid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "S",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "m",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "H",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "D",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "W",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "M",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "Y",
+                "composite": null,
+                "datapoints": []
+            }],
+            "invalid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "X",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": null,
+                "composite": null,
+                "datapoints": []
+            }]
+        },
+        "composite": {
+            "valid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "S",
+                "composite": null,
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "m",
+                "composite": "S",
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "Y",
+                "composite": "D",
+                "datapoints": []
+            }],
+            "invalid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "S",
+                "composite": "X",
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "S",
+                "composite": "S",
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "m",
+                "composite": "H",
+                "datapoints": []
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "m",
+                "composite": "D",
+                "datapoints": []
+            }]
+        },
+        "datapoints": {
+            "valid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "S",
+                "composite": null,
+                "datapoints": []
+            }],
+            "invalid": [{
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "S",
+                "composite": null,
+                "datapoints": null
+            }, {
+                "name": "Test Series 1",
+                "description": "A test series.",
+                "units": "kg",
+                "type": 1,
+                "resolution": "S",
+                "composite": null,
+                "datapoints": "D"
+            }]
+        }
+    },
+    "validateDatapoint": {
+        "timezone": {
+            "valid": [[
+                {"timestamp": 0, "value": 0, "timezone": "UTC", "components": []},
+                {"resolution": "S", "composite": null}
+            ], [
+                {"timestamp": 0, "value": 0, "timezone": null, "components": []},
+                {"resolution": "D", "composite": null}
+            ]],
+            "invalid": [[
+                {"timestamp": 0, "value": 0, "timezone": null, "components": []},
+                {"resolution": "S", "composite": null}
+            ], [
+                {"timestamp": 0, "value": 0, "timezone": "UTC", "components": []},
+                {"resolution": "D", "composite": null}
+            ]]
+        },
+        "timestamp": {
+            "valid": [[
+                {"timestamp": 120, "value": 0, "timezone": "UTC", "components": []},
+                {"resolution": "m", "composite": null}
+            ], [
+                {"timestamp": -86400, "value": 0, "timezone": null, "components": []},
+                {"resolution": "D", "composite": null}
+            ]],
+            "invalid": [[
+                {"timestamp": 13, "value": 0, "timezone": "UTC", "components": []},
+                {"resolution": "m", "composite": null}
+            ], [
+                {"timestamp": 4000, "value": 0, "timezone": null, "components": []},
+                {"resolution": "D", "composite": null}
+            ]]
+        },
+        "components": {
+            "valid": [[
+                {"timestamp": 3600, "value": 0, "timezone": "UTC", "components": [{
+                    "timestamp": 120, "value": 0, "timezone": "UTC"
+                }]},
+                {"resolution": "H", "composite": "m"}
+            ], [
+                {"timestamp": 86400, "value": 0, "timezone": null, "components": [{
+                    "timestamp": 7200, "value": 0, "timezone": "UTC"
+                }]},
+                {"resolution": "D", "composite": "H"}
+            ]],
+            "invalid": [[
+                {"timestamp": 3600, "value": 0, "timezone": "UTC", "components": [{
+                    "timestamp": 120, "value": 0, "timezone": "UTC"
+                }]},
+                {"resolution": "H", "composite": null}
+            ], [
+                {"timestamp": 3600, "value": 0, "timezone": "UTC", "components": [{
+                    "timestamp": 120, "value": 0, "timezone": "UTC"
+                }]},
+                {"resolution": "H", "composite": "D"}
+            ], [
+                {"timestamp": 86400, "value": 0, "timezone": null, "components": []},
+                {"resolution": "D", "composite": "H"}
+            ]]
+        }
     }
 }
