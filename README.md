@@ -6,6 +6,12 @@ Python and Javascript.
 ## Series
 
 A series is a JSON object that represents how some quantity changes over time.
+It has a name, description and units to give information about what it
+represents. It has a series type to indicate what kind of series it is
+conceptually. It has a resolution to indicate what kind of data it can hold,
+and a composite resolution indicates what resolution the series this one was
+created from had, if applicable. Composite series have datapoints with
+composites.
 
 ## Functions
 
